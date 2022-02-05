@@ -17,3 +17,6 @@ body {
   grid-template-columns: repeat(2, 30%);
   grid-auto-rows: 300px;
 }
+video {
+  object-fit: cover;
+}

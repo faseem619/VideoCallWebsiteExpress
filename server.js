@@ -17,6 +17,8 @@ app.get("/:roomId", (req, res) => {
 io.on("connection", (socket) => {
   socket.on("join-room", (roomId, userId) => {
     console.log(roomId, userId);
+    socket.join(roomId);
+    // socket.to(roomId).broadcast.emit("user-connected", userId);
   });
 });
 
