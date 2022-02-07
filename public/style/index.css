@@ -5,9 +5,12 @@
 }
 :root {
   --font-size-h1: 4rem;
-  --accent-color: #54bab9;
-  --text-color: #e9dac1;
-  --background-color: #fbf8f1;
+  --accent-color: #016fb9;
+  --text-color: #fcfcfc;
+  --background-color: #fafafa;
+
+  --font-body: "Roboto", sans-serif;
+  --font-heading: "Roboto Slab", serif;
 }
 body {
   background-color: var(--background-color);
@@ -21,11 +24,13 @@ body {
 nav {
   background-color: var(--accent-color);
   padding: 1.5rem;
-
   padding-left: 1rem;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.466);
+  z-index: 10;
 }
 h1 {
   font-size: var(--font-size-h1);
+  font-family: var(--font-heading);
   color: var(--text-color);
 }
 main {
@@ -37,13 +42,41 @@ main {
 .container {
   display: flex;
   column-gap: 4rem;
+  font-family: var(--font-body);
+  color: var(--text-color);
 }
 .create-div {
   background-color: var(--accent-color);
-  padding: 2rem;
+  padding: 1rem 1.5rem;
   cursor: pointer;
+  border-radius: 5px;
 }
 .join-sections {
   display: flex;
   column-gap: 1rem;
+}
+#id-input {
+  padding-left: 0.3em;
+  border-radius: 3px;
+  border-width: 1px;
+  border-color: lightgrey;
+  outline: none;
+}
+#id-input:focus {
+  outline: none;
+  border-color: #2a82bd;
+  border-width: 1.5px;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --font-size-h1: 2rem;
+  }
+  .container {
+    flex-direction: column;
+    row-gap: 2em;
+  }
+  div {
+    text-align: center;
+  }
 }
