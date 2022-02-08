@@ -57,9 +57,6 @@ const peer = new Peer(undefined, {
 peer.on("open", (id) => {
   socket.emit("join-room", ROOM_ID, id);
 });
-peer.on("connection", (conn) => {
-  conn.on(close);
-});
 
 socket.on("user-disconnected", (id) => {
   console.log("someone left");

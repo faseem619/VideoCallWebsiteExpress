@@ -98,7 +98,7 @@ main {
 }
 
 img {
-  width: 70%;
+  width: 50%;
   border-radius: 50%;
   display: block;
   margin-bottom: 2em;
@@ -113,6 +113,7 @@ img {
 @media (max-width: 800px) {
   :root {
     --font-size-h1: 2rem;
+    --font-size-h2: 1.2rem;
   }
   .container {
     flex-direction: column;
@@ -120,6 +121,24 @@ img {
   }
   div {
     text-align: center;
+  }
+  main {
+    flex-direction: column;
+  }
+  .container {
+    align-items: center;
+  }
+  .inner-container {
+    width: 90%;
+  }
+  #id-input {
+    padding-right: 3rem;
+  }
+  .create-div {
+    padding: 0.5rem 1rem;
+  }
+  .intro p {
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 800px) {
