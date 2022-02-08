@@ -69,8 +69,13 @@ socket.on("user-disconnected", (id) => {
 
 // client side functions
 
-const muteUnmute = (e) => {
+const muteUnmute = (element) => {
   userStream.getAudioTracks()[0].enabled =
     !userStream.getAudioTracks()[0].enabled;
-  e.classList.toggle("button-selected");
+  element.classList.toggle("button-selected");
+};
+const toggleVideo = (element) => {
+  userStream.getVideoTracks()[0].enabled =
+    !userStream.getVideoTracks()[0].enabled;
+  element.classList.toggle("button-selected");
 };

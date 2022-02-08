@@ -143,7 +143,6 @@ img {
 }
 @media (min-width: 800px) {
   .intro {
-    border-right: 2px solid var(--text-color-secondarty);
     border-right: 2px solid lightgray;
   }
   .create-div:hover {
