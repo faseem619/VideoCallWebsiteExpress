@@ -1,9 +1,9 @@
 const socket = io("/");
 const container = document.querySelector(".videos-container");
 const otherUsers = {};
+let userStream;
 
 const addVideoStream = (video, stream) => {
-  video.muted = true;
   video.srcObject = stream;
   video.addEventListener("loadedmetadata", () => {
     video.play();
@@ -26,7 +26,9 @@ const connectToNewUser = (id, stream) => {
 navigator.mediaDevices
   .getUserMedia({ video: true, audio: true })
   .then((stream) => {
+    userStream = stream;
     const videoElement = document.createElement("video");
+    videoElement.muted = true;
     addVideoStream(videoElement, stream);
     // when we are the one joining
     peer.on("call", (call) => {
@@ -64,3 +66,11 @@ socket.on("user-disconnected", (id) => {
     otherUsers[id].close();
   }
 });
+
+// client side functions
+
+const muteUnmute = (e) => {
+  userStream.getAudioTracks()[0].enabled =
+    !userStream.getAudioTracks()[0].enabled;
+  e.classList.toggle("button-selected");
+};
