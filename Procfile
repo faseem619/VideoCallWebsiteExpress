@@ -1,1 +1,1 @@
-web: nodemon server.js & peerjs --port 3001
+web: node server.js & peerjs --port 3001
