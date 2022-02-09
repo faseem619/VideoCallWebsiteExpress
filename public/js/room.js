@@ -53,9 +53,9 @@ navigator.mediaDevices
 
 // webrtc section
 const peer = new Peer(undefined, {
-  host: "/",
-  port: 3001,
-  path: "/",
+  host: "peerjs-server-faseem.herokuapp.com",
+  port: 443,
+  path: "/myapp",
 });
 
 peer.on("open", (id) => {

@@ -17,7 +17,6 @@ app.use(express.static("public"));
 app.use(cors({ origin: "*" }));
 
 app.get("/", (req, res) => {
-  console.log("this is a test");
   res.render("index");
 });
 app.get("/create-room", (req, res) => {
