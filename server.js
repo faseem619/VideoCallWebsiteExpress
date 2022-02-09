@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 app.get("/", (req, res) => {
   res.render("index");
