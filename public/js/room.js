@@ -56,6 +56,7 @@ const peer = new Peer(undefined, {
   host: "/",
   port: 9000,
   path: "/myapp",
+  proxied: true,
 });
 
 peer.on("open", (id) => {
