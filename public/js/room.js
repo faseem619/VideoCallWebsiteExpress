@@ -54,9 +54,8 @@ navigator.mediaDevices
 // webrtc section
 const peer = new Peer(undefined, {
   host: "/",
-  port: 9000,
-  path: "/myapp",
-  proxied: true,
+  port: 3001,
+  path: "/",
 });
 
 peer.on("open", (id) => {
@@ -65,7 +64,6 @@ peer.on("open", (id) => {
 });
 
 socket.on("user-disconnected", (id) => {
-  console.log("someone left");
   if (otherUsers[id]) {
     otherUsers[id].close();
   }
