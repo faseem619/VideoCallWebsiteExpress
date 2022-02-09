@@ -52,7 +52,6 @@ navigator.mediaDevices
 
 // webrtc section
 const peer = new Peer(undefined, {
-  secure: true,
   host: "https://video-call-app-express.herokuapp.com/",
   port: 443,
 });
