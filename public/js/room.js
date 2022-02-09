@@ -79,3 +79,7 @@ const toggleVideo = (element) => {
     !userStream.getVideoTracks()[0].enabled;
   element.classList.toggle("button-selected");
 };
+const leaveMeeting = () => {
+  window.location.href = `${window.origin}/`;
+};
+const copyToClipBoard = () => navigator.clipboard.writeText(ROOM_ID);

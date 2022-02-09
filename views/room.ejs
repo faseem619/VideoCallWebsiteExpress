@@ -9,6 +9,11 @@
       src="https://kit.fontawesome.com/ebf4dda567.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/style/room.css" />
     <script>
       const ROOM_ID = "<%= roomId %>";
@@ -24,12 +29,19 @@
   <body>
     <div class="videos-container"></div>
     <footer>
-      <div class="meeting-id"><%= roomId %></div>
+      <div class="meeting-id" onclick="copyToClipBoard()">
+        Room ID: <span><%= roomId %></span>
+        <span class="material-icons"> content_copy </span>
+      </div>
       <div class="button-container" onclick="muteUnmute(this)">
+        <!-- <i class="fas fa-microphone-slash"></i> -->
         <i class="fas fa-microphone-slash"></i>
       </div>
       <div class="button-container" onclick="toggleVideo(this)">
         <i class="fas fa-video-slash"></i>
+      </div>
+      <div class="button-container" id="leave-btn" onclick="leaveMeeting()">
+        <span class="material-icons"> logout </span>
       </div>
     </footer>
   </body>

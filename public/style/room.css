@@ -22,7 +22,7 @@ body {
   padding: 2rem;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, calc(50% - 1rem)));
+  grid-template-columns: repeat(auto-fill, calc(50% - 1rem));
   gap: 1rem;
   grid-auto-rows: 380px;
   flex-grow: 1;
@@ -39,20 +39,47 @@ footer {
   background-color: var(--background-color-secondary);
   display: flex;
   justify-content: space-around;
+  align-items: center;
   color: aliceblue;
   padding: 3rem;
   flex-wrap: wrap;
+  row-gap: 3em;
 }
 .button-container,
 .meeting-id {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 0.3em;
 }
 .button-container {
   border: 5px solid aliceblue;
   border-radius: 50%;
-  padding: 0.4em;
+  padding: 0.8em;
+  display: grid;
+  place-items: center;
   z-index: 2;
 }
 .button-selected {
   border-color: red;
+}
+#leave-btn {
+  border-color: red;
+}
+
+@media (max-width: 800px) {
+  .meeting-id {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .meeting-id > span {
+    display: none;
+  }
+  body,
+  html {
+    height: 100vh;
+  }
+  .videos-container {
+    grid-auto-rows: 30%;
+  }
 }
