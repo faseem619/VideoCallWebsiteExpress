@@ -45,6 +45,7 @@ navigator.mediaDevices
     });
     // when someone else joins the the room
     socket.on("user-connected", (userId) => {
+      console.log("someone else connected");
       connectToNewUser(userId, stream);
     });
   })
@@ -57,6 +58,7 @@ const peer = new Peer(undefined, {
 });
 
 peer.on("open", (id) => {
+  console.log("connected");
   socket.emit("join-room", ROOM_ID, id);
 });
 
