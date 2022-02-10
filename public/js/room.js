@@ -61,8 +61,8 @@ const peer = new Peer(undefined, {
       { urls: "stun:stun.l.google.com:19302" },
       {
         urls: "turn:numb.viagenie.ca",
-        credential: "muazkh",
-        username: "webrtc@live.com",
+        credential: "Nyni85tJZMthdLZ",
+        username: "faseem619@gmail.com",
       },
     ],
   },
