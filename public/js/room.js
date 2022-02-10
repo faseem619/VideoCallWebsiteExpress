@@ -24,7 +24,7 @@ const connectToNewUser = (id, stream) => {
 };
 
 navigator.mediaDevices
-  .getUserMedia({ video: true, audio: true })
+  .getUserMedia({ video: { facingMode: "user" }, audio: true })
   .then((stream) => {
     userStream = stream;
     const videoElement = document.createElement("video");
