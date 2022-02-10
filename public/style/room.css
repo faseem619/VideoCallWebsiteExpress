@@ -1,6 +1,3 @@
-h1 {
-  color: red;
-}
 * {
   margin: 0%;
   padding: 0;
@@ -60,9 +57,7 @@ footer {
   place-items: center;
   z-index: 2;
 }
-.button-selected {
-  border-color: red;
-}
+.button-selected,
 #leave-btn {
   border-color: red;
 }

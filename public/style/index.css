@@ -57,7 +57,6 @@ main {
   flex: 1.2;
   display: flex;
   justify-content: center;
-
   font-family: var(--font-body);
   color: var(--text-color);
 }
@@ -87,9 +86,7 @@ main {
   padding-left: 0.7em;
   padding-right: 5em;
   border-radius: 3px;
-  border-width: 1px;
-  border-color: lightgrey;
-  outline: none;
+  border: 1px solid var(--text-color-secondarty);
 }
 #id-input:focus {
   outline: none;
@@ -146,6 +143,6 @@ img {
     border-right: 2px solid lightgray;
   }
   .create-div:hover {
-    background-color: #0141b9;
+    background-color: #1350c0;
   }
 }
